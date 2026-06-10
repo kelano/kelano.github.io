@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kellen Gillespie — Research Scientist</title>
+    <style>
+        :root {
+            --text: #2d2d2d;
+            --muted: #666;
+            --accent: #1a5276;
+            --bg: #fff;
+            --border: #e0e0e0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+
+        header {
+            display: flex;
+            gap: 32px;
+            align-items: flex-start;
+            margin-bottom: 48px;
+        }
+
+        .headshot {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .headshot-placeholder {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            background: var(--border);
+            flex-shrink: 0;
+        }
+
+        header h1 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        header .affiliation {
+            color: var(--muted);
+            font-size: 17px;
+            margin-bottom: 12px;
+        }
+
+        header p {
+            font-size: 15px;
+            color: var(--text);
+        }
+
+        .links {
+            margin-top: 12px;
+            font-size: 15px;
+        }
+
+        .links a {
+            color: var(--accent);
+            text-decoration: none;
+            margin-right: 16px;
+        }
+
+        .links a:hover { text-decoration: underline; }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        section h2 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .pub {
+            margin-bottom: 16px;
+        }
+
+        .pub .title {
+            font-weight: 500;
+        }
+
+        .pub .title a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .pub .title a:hover { text-decoration: underline; }
+
+        .pub .authors {
+            font-size: 14px;
+            color: var(--muted);
+        }
+
+        .pub .venue {
+            font-size: 14px;
+            color: var(--muted);
+            font-style: italic;
+        }
+
+        .pub .note {
+            font-size: 13px;
+            color: var(--accent);
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 6px;
+            font-size: 15px;
+        }
+
+        footer {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        .logo-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+            margin-bottom: 48px;
+            flex-wrap: wrap;
+        }
+
+        .logo-bar img {
+            height: 32px;
+            width: auto;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+        }
+
+        .logo-bar img.logo-tall {
+            height: 48px;
+        }
+
+        .logo-bar img.logo-invert {
+            filter: invert(1);
+            height: 24px;
+        }
+
+        .logo-bar img:hover {
+            opacity: 1;
+        }
+
+        @media (max-width: 600px) {
+            header { flex-direction: column; align-items: center; text-align: center; }
+            .links { text-align: center; }
+            .logo-bar { gap: 20px; }
+            .logo-bar img { height: 24px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <header>
+            <img class="headshot" src="photo.jpg" alt="Kellen Gillespie">
+            <div>
+                <h1>Kellen Gillespie</h1>
+                <div class="affiliation">Research Scientist, Superhuman (formerly Grammarly)</div>
+                <p>
+                    I build production ML systems that leverage context &mdash; conversational, visual, and preferential &mdash;
+                    to understand user intent and make decisions at scale. My work spans contextual query rewriting and
+                    speech processing (Alexa), multimodal reasoning and personalization (Amazon AGI), and LLM-based
+                    orchestration for large tool libraries (Superhuman).
+                </p>
+                <div class="links">
+                    <a href="mailto:kellen.gillespie@gmail.com">Email</a>
+                    <a href="https://scholar.google.com/citations?user=sVXoqngAAAAJ&hl=en">Google Scholar</a>
+                    <a href="https://www.linkedin.com/in/kellen-gillespie-9a955887/">LinkedIn</a>
+                </div>
+            </div>
+        </header>
+
+        <div class="logo-bar">
+            <img src="logos/superhuman.png" alt="Superhuman">
+            <img src="logos/grammarly.png" alt="Grammarly">
+            <img src="logos/amazon.png" alt="Amazon">
+            <img src="logos/alexa.png" alt="Amazon Alexa">
+            <img src="logos/knexus.png" alt="Knexus Research" class="logo-invert">
+            <img src="logos/nrl.png" alt="US Naval Research Laboratory" class="logo-tall">
+            <img src="logos/lehigh.png" alt="Lehigh University">
+        </div>
+
+        <section>
+            <h2>Experience</h2>
+            <ul>
+                <li><strong>2024 &ndash; present:</strong> Research Scientist, Superhuman (formerly Grammarly) &mdash; LLM orchestration, tool routing at scale, multi-step planning</li>
+                <li><strong>2015 &ndash; 2024:</strong> Applied Scientist &rarr; Senior Applied Scientist, Amazon AGI &amp; Alexa AI &mdash; contextual query rewriting, device directedness, speech/whisper detection, personalization, multimodal reasoning</li>
+                <li><strong>2010 &ndash; 2015:</strong> Senior Scientist, Knexus Research Corporation (US Naval Research Laboratory) &mdash; goal reasoning, planning, spatial reasoning, NLU for autonomous systems</li>
+                <li><strong>2009 &ndash; 2010:</strong> AI Researcher, InSyTe Lab, Lehigh University &mdash; case-based reasoning, reinforcement learning</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Research Interests</h2>
+            <ul>
+                <li>LLM orchestration: tool routing, retrieval-augmented dispatch, and code execution at scale</li>
+                <li>Multi-step planning and selective escalation for agent systems</li>
+                <li>Contextual language understanding: query rewriting, coreference, and dialogue state</li>
+                <li>Speech and multimodal signal processing: device directedness, whisper detection, visual grounding</li>
+                <li>Personalization, content ranking, and image retrieval with LLMs</li>
+                <li>Goal reasoning and planning for autonomous agents</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Publications</h2>
+
+            <div class="pub">
+                <div class="title">Scalable Orchestration: Routing and Retrieval for Large Tool Catalogs</div>
+                <div class="authors"><strong>K. Gillespie</strong></div>
+                <div class="venue">EMNLP 2026 Industry Track (under review)</div>
+            </div>
+
+            <div class="pub">
+                <div class="title"><a href="https://arxiv.org/abs/2310.20081">Integrating Summarization and Retrieval for Enhanced Personalization via Large Language Models</a></div>
+                <div class="authors">C. Richardson, Y. Zhang, <strong>K. Gillespie</strong>, S. Kar, A. Singh, Z. Raeesy, O.Z. Khan, et al.</div>
+                <div class="venue">CIKM 2023</div>
+            </div>
+
+            <div class="pub">
+                <div class="title"><a href="https://aclanthology.org/2023.acl-long.937/">Unified Contextual Query Rewriting</a></div>
+                <div class="authors">Y. Zhou, J. Hao, M. Rungta, Y. Liu, E. Cho, X. Fan, Y. Lu, V. Vasudevan, <strong>K. Gillespie</strong>, Z. Raeesy</div>
+                <div class="venue">ACL 2023</div>
+            </div>
+
+            <div class="pub">
+                <div class="title"><a href="https://ieeexplore.ieee.org/document/9054081">Improving Device Directedness Classification of Utterances with Semantic Lexical Features</a></div>
+                <div class="authors"><strong>K. Gillespie</strong>, I.C. Konstantakopoulos, X. Guo, V.T. Vasudevan, A. Sethy</div>
+                <div class="venue">ICASSP 2020</div>
+            </div>
+
+            <div class="pub">
+                <div class="title"><a href="https://ieeexplore.ieee.org/document/8639585">LSTM-based Whisper Detection</a></div>
+                <div class="authors">Z. Raeesy, <strong>K. Gillespie</strong>, C. Ma, T. Drugman, J. Gu, R. Maas, A. Rastrow, et al.</div>
+                <div class="venue">IEEE SLT 2018</div>
+            </div>
+
+            <div class="pub">
+                <div class="title"><a href="https://link.springer.com/chapter/10.1007/978-3-319-57969-6_9">Semantic Classification of Utterances in a Language-driven Game</a></div>
+                <div class="authors"><strong>K. Gillespie</strong>, M.W. Floyd, M. Molineaux, S.S. Vattam, D.W. Aha</div>
+                <div class="venue">CGW@IJCAI 2016</div>
+            </div>
+
+            <div class="pub">
+                <div class="title"><a href="https://apps.dtic.mil/sti/pdfs/ADA621708.pdf">Goal Reasoning for an Autonomous Squad Member</a></div>
+                <div class="authors"><strong>K. Gillespie</strong>, M. Molineaux, M.W. Floyd, S.S. Vattam, D.W. Aha</div>
+                <div class="venue">ACS Workshop on Goal Reasoning 2015</div>
+            </div>
+
+            <div class="pub">
+                <div class="title">Goal Reasoning: Papers from the ACS Workshop</div>
+                <div class="authors">A.K. Goel, D.W. Aha, T.S. Anderson, B. Bengfort, M. Burstein, D. Cerys, <strong>K. Gillespie</strong>, et al.</div>
+                <div class="venue">Georgia Institute of Technology 2015</div>
+            </div>
+
+            <div class="pub">
+                <div class="title"><a href="https://ceur-ws.org/Vol-1520/paper2.pdf">Case-based Local and Global Percept Processing for Rebel Agents</a></div>
+                <div class="authors">A. Coman, <strong>K. Gillespie</strong>, H. Munoz-Avila</div>
+                <div class="venue">ICCBR Workshops 2015</div>
+            </div>
+
+            <div class="pub">
+                <div class="title">eBotworks: A Software Platform for Developing and Evaluating Communicative Autonomous Systems</div>
+                <div class="authors">K.M. Gupta, <strong>K. Gillespie</strong></div>
+                <div class="venue">AUVSI Unmanned Systems 2015</div>
+            </div>
+
+            <div class="pub">
+                <div class="title"><a href="https://www.cse.lehigh.edu/~munoz/Publications/RebelMotivation.pdf">Believable Emotion-Influenced Perception: The Path to Motivated Rebel Agents</a></div>
+                <div class="authors">A. Coman, <strong>K. Gillespie</strong>, H. Munoz-Avila</div>
+                <div class="venue">ACS Workshop on Goal Reasoning 2015</div>
+            </div>
+
+            <div class="pub">
+                <div class="title"><a href="https://link.springer.com/chapter/10.1007/978-3-319-11209-1_6">Case-based Object Placement Planning</a></div>
+                <div class="authors"><strong>K. Gillespie</strong>, K.M. Gupta, M. Drinkwater</div>
+                <div class="venue">ICCBR 2014</div>
+            </div>
+
+            <div class="pub">
+                <div class="title"><a href="https://www.academia.edu/72775264/Spatial_Planning_For_Placement_Command_Understanding">Spatial Planning for Placement Command Understanding</a></div>
+                <div class="authors">K.M. Gupta, <strong>K. Gillespie</strong>, J. Karneeb, H. Borck</div>
+                <div class="venue">ACS 2013</div>
+            </div>
+
+            <div class="pub">
+                <div class="title"><a href="https://apps.dtic.mil/sti/pdfs/ADA556117.pdf">Representing and Reasoning with Functional Knowledge for Spatial Language Understanding</a></div>
+                <div class="authors">K.M. Gupta, A.R. Schneider, M. Klenk, <strong>K. Gillespie</strong>, J. Karneeb</div>
+                <div class="venue">CoSLI Workshop 2011</div>
+            </div>
+
+            <div class="pub">
+                <div class="title"><a href="https://link.springer.com/chapter/10.1007/978-3-642-14274-1_13">Imitating Inscrutable Enemies: Learning from Stochastic Policy Observation, Retrieval and Reuse</a></div>
+                <div class="authors"><strong>K. Gillespie</strong>, J. Karneeb, S. Lee-Urban, H. Munoz-Avila</div>
+                <div class="venue">ICCBR 2010</div>
+            </div>
+
+            <p style="font-size: 14px; color: var(--muted); margin-top: 8px;">
+                See <a href="https://scholar.google.com/citations?user=sVXoqngAAAAJ&hl=en" style="color: var(--accent);">Google Scholar</a> for a full list.
+            </p>
+        </section>
+
+        <section>
+            <h2>Patents</h2>
+
+            <div class="pub">
+                <div class="title">Supplemental Content Recommender</div>
+                <div class="authors">Y. Fu, S.C. Webster, <strong>K. Gillespie</strong>, Z. Raeesy, Q. You, Y. Zhang</div>
+                <div class="venue">US Patent App. P85156-US01 (filed 2024)</div>
+            </div>
+
+            <div class="pub">
+                <div class="title">Intent Re-ranker</div>
+                <div class="authors">A.R. Shapiro, M.C.B. Gens, S. Matsoukas, <strong>K. Gillespie</strong>, R. Goel</div>
+                <div class="venue">US Patent 11,227,585 (2022)</div>
+            </div>
+
+            <div class="pub">
+                <div class="title">Contextual Entity Resolution</div>
+                <div class="authors"><strong>K. Gillespie</strong>, M.C.B. Gens</div>
+                <div class="venue">US Patent 11,081,107 (2021)</div>
+            </div>
+
+            <div class="pub">
+                <div class="title">Intent Re-ranker</div>
+                <div class="authors">A.R. Shapiro, M.C.B. Gens, S. Matsoukas, <strong>K. Gillespie</strong>, R. Goel</div>
+                <div class="venue">US Patent 10,600,406 (2020)</div>
+            </div>
+
+            <div class="pub">
+                <div class="title">Contextual Entity Resolution</div>
+                <div class="authors"><strong>K. Gillespie</strong>, M.C.B. Gens</div>
+                <div class="venue">US Patent 10,229,680 (2019)</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Selected Projects</h2>
+
+            <div class="pub">
+                <div class="title"><a href="https://www.amazon.science/blog/how-alexa-knows-when-youre-talking-to-her">How Alexa Knows When You're Talking to Her</a></div>
+                <div class="authors">Amazon Science blog, May 2020</div>
+                <div class="venue">Lead IC on Alexa Follow-Up Mode &mdash; device-directedness classifier combining acoustic and semantic features. Feature has &gt;2M WAU.</div>
+            </div>
+
+            <div class="pub">
+                <div class="title"><a href="https://www.amazon.science/blog/teaching-alexa-to-follow-conversations">Teaching Alexa to Follow Conversations</a></div>
+                <div class="authors">Amazon Science blog, June 2019</div>
+                <div class="venue">Lead IC on Contextual Query Rewriting &mdash; seq2seq model resolving anaphora and ellipsis in dialogue. Improved contextual traffic coverage by 22%. Feature has &gt;10M WAU.</div>
+            </div>
+
+            <div class="pub">
+                <div class="title"><a href="https://www.amazon.science/blog/whisper-to-alexa-and-shell-whisper-back">Whisper to Alexa, and She'll Whisper Back</a></div>
+                <div class="authors">Amazon Science blog, September 2018</div>
+                <div class="venue">Co-developed LSTM-based whisper detection model enabling Alexa Whisper Mode. Feature has &gt;5M WAU.</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <ul>
+                <li><strong>M.S., Computer Science and Engineering</strong> &mdash; Lehigh University, 2010. Advisor: Hector Mu&ntilde;oz-Avila</li>
+                <li><strong>B.S., Computer Science and Engineering</strong> &mdash; Lehigh University, 2009. Minor: Philosophy. President&rsquo;s Scholar Award</li>
+            </ul>
+        </section>
+
+        <footer>
+            &copy; 2026 Kellen Gillespie
+        </footer>
+
+    </div>
+</body>
+</html>
