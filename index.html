@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kellen Gillespie — Research Scientist</title>
+    <meta name="description" content="Kellen Gillespie — Research Scientist at Superhuman. ML systems for LLM orchestration, contextual language understanding, and speech processing.">
+    <meta property="og:title" content="Kellen Gillespie — Research Scientist">
+    <meta property="og:description" content="ML systems for LLM orchestration, contextual language understanding, and speech processing.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="photo.jpg">
+    <meta name="twitter:card" content="summary">
     <style>
         :root {
             --text: #2d2d2d;
@@ -81,6 +87,7 @@
         }
 
         .links a:hover { text-decoration: underline; }
+        a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
         section {
             margin-bottom: 40px;
@@ -171,19 +178,21 @@
             opacity: 1;
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
             header { flex-direction: column; align-items: center; text-align: center; }
+            .headshot { width: 120px; height: 120px; }
             .links { text-align: center; }
             .logo-bar { gap: 20px; }
             .logo-bar img { height: 24px; }
+            .logo-bar img.logo-tall { height: 36px; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <main class="container">
 
         <header>
-            <img class="headshot" src="photo.jpg" alt="Kellen Gillespie">
+            <img class="headshot" src="photo.jpg" alt="Kellen Gillespie" width="160" height="160">
             <div>
                 <h1>Kellen Gillespie</h1>
                 <div class="affiliation">Research Scientist, Superhuman (formerly Grammarly)</div>
@@ -202,13 +211,13 @@
         </header>
 
         <div class="logo-bar">
-            <img src="logos/superhuman.png" alt="Superhuman">
-            <img src="logos/grammarly.png" alt="Grammarly">
-            <img src="logos/amazon.png" alt="Amazon">
-            <img src="logos/alexa.png" alt="Amazon Alexa">
-            <img src="logos/knexus.png" alt="Knexus Research" class="logo-invert">
-            <img src="logos/nrl.png" alt="US Naval Research Laboratory" class="logo-tall">
-            <img src="logos/lehigh.png" alt="Lehigh University">
+            <img src="logos/superhuman.png" alt="Superhuman" loading="lazy">
+            <img src="logos/grammarly.png" alt="Grammarly" loading="lazy">
+            <img src="logos/amazon.png" alt="Amazon" loading="lazy">
+            <img src="logos/alexa.png" alt="Amazon Alexa" loading="lazy">
+            <img src="logos/knexus.png" alt="Knexus Research" class="logo-invert" loading="lazy">
+            <img src="logos/nrl.png" alt="US Naval Research Laboratory" class="logo-tall" loading="lazy">
+            <img src="logos/lehigh.png" alt="Lehigh University" loading="lazy">
         </div>
 
         <section>
@@ -388,6 +397,13 @@
         </section>
 
         <section>
+            <h2>Service</h2>
+            <ul>
+                <li>Program Committee / Reviewer: EMNLP CALCS Workshop, FLAIRS, ICCBR, IJCAI</li>
+            </ul>
+        </section>
+
+        <section>
             <h2>Education</h2>
             <ul>
                 <li><strong>M.S., Computer Science and Engineering</strong> &mdash; Lehigh University, 2010. Advisor: Hector Mu&ntilde;oz-Avila</li>
@@ -399,6 +415,6 @@
             &copy; 2026 Kellen Gillespie
         </footer>
 
-    </div>
+    </main>
 </body>
 </html>
